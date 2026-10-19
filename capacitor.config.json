@@ -1,0 +1,6 @@
+{
+  "appId":"com.oncora.care",
+  "appName":"ONCORA",
+  "webDir":".",
+  "server":{"iosScheme":"https"}
+}
