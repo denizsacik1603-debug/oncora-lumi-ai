@@ -1,7 +1,7 @@
 // ONCORA 6 – invitation-only educational prototype. No clinical or privacy certification.
-import {reply,configured,identity,sameOrigin,consume} from './_security.mjs';
+import {reply,configured,guestConfigured,identity,sameOrigin,consume} from './_security.mjs';
 export default async function handler(req){
- if(req.method==='GET')return reply({configured:configured(),accessRequired:true});
+ if(req.method==='GET')return reply({configured:configured()||guestConfigured(),accessRequired:true});
  if(req.method!=='POST')return reply({error:'Method not allowed'},405);
  if(!sameOrigin(req))return reply({error:'Origin not allowed'},403);
  const id=identity(req);if(!id)return reply({error:'Invitation required',code:'LOGIN_REQUIRED'},401);
