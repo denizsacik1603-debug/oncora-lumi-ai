@@ -1,1 +1,10 @@
-{"name":"LEVUNIO – Your journey, supported","short_name":"LEVUNIO","description":"Your digital cancer support companion","start_url":"/","display":"standalone","background_color":"#f7f7f1","theme_color":"#183c36","lang":"de"}
+{
+  "name": "LEVUNIO – Your journey, supported",
+  "short_name": "LEVUNIO",
+  "description": "Your digital cancer support companion",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f7f1",
+  "theme_color": "#183c36",
+  "lang": "de"
+}
