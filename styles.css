@@ -15,3 +15,9 @@
 
 /* LEVUNIO 6: invite access */
 .access-panel{margin:18px 0}.access-form{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}.access-form input{flex:1;min-width:180px}.access-form .btn{min-width:140px}
+
+/* LEVUNIO V9 quota notice */
+.quota-overlay{position:fixed;inset:0;z-index:99999;background:rgba(8,34,32,.72);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px)}
+.quota-dialog{width:min(100%,440px);max-height:90dvh;overflow-y:auto;background:#fcfcf5;color:#213e39;border-radius:24px;padding:32px 27px;text-align:center;box-shadow:0 24px 80px #0005;display:flex;flex-direction:column;align-items:center;gap:14px}
+.quota-dialog h2{font-size:1.65rem;line-height:1.2;margin:0}.quota-dialog p{line-height:1.6;margin:0}.quota-heart{font-size:52px;color:#419b8a}.quota-dialog strong{font-size:1.7rem}.quota-dialog small{font-size:.9rem;font-weight:normal}.quota-dialog .quota-disclaimer{font-size:.83rem;color:#60746c}.quota-dialog .btn{width:100%;min-height:44px}
+@media(prefers-reduced-motion:reduce){.quota-overlay{backdrop-filter:none}}
