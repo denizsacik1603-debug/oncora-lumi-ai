@@ -1,6 +1,6 @@
 {
   "appId":"com.oncora.care",
-  "appName":"ONCORA",
+  "appName":"LEVUNIO",
   "webDir":".",
   "server":{"iosScheme":"https"}
 }

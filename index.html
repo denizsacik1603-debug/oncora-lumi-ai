@@ -1,19 +1,6 @@
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#173b37">
-  <meta name="description" content="LEVUNIO – Deine digitale Begleitung bei Krebs.">
-  <title>LEVUNIO — LUMI begleitet dich</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="manifest" href="manifest.webmanifest">
-</head>
-<body>
-  <a class="skip" href="#main">Zum Inhalt springen</a>
-  <div id="app">
-    <div class="loading">LEVUNIO</div>
-  </div>
-  <script src="app.js" defer></script>
-</body>
-</html>
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#173b37"><meta name="description" content="LEVUNIO – Deine Begleitung bei Krebs. Informationen, Fragen, Beschwerden und Alltag an einem Ort."><title>LEVUNIO 4.0 — LUMI begleitet dich</title><link rel="stylesheet" href="styles.css"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="welcome.css"></head><body><a class="skip" href="#main">Zum Inhalt springen</a><div id="app"><div class="loading">LEVUNIO</div></div><script src="app.js" defer></script><div id="levunio-welcome" role="status" aria-live="polite" aria-label="LEVUNIO startet">
+  <button class="welcome-skip" data-welcome-skip type="button" aria-label="Einführung überspringen">Überspringen</button>
+  <div class="welcome-inner"><div class="welcome-mark"><img src="levunio-emblem.png" alt="LEVUNIO – schützende Umarmung" decoding="async"></div><div class="welcome-brand">LEVUNIO</div>
+  <p class="welcome-message" data-welcome-message>Wie schön, dass es dich gibt.</p>
+  <div class="welcome-progress" aria-hidden="true"></div><p class="welcome-hint">DEIN BEGLEITER STARTET …</p></div></div>
+<script src="welcome.js" defer></script></body></html>

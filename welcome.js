@@ -1,0 +1,16 @@
+(()=>{'use strict';
+const root=document.getElementById('levunio-welcome');
+if(!root)return;
+const text=root.querySelector('[data-welcome-message]');
+const close=()=>{if(root.dataset.closed)return;root.dataset.closed='1';root.classList.add('welcome-out');setTimeout(()=>root.remove(),520)};
+root.querySelector('[data-welcome-skip]')?.addEventListener('click',close);
+const fallback=['Wie schön, dass es dich gibt.','Du bist ein wunderbarer Mensch.','Du musst heute nicht alles schaffen.','Du darfst dir heute Zeit für dich nehmen.'];
+const choose=(list)=>{let prev=-1;try{prev=Number(sessionStorage.getItem('levunio-welcome-last')||'-1')}catch{};
+  let index=Math.floor(Math.random()*list.length);if(list.length>1&&index===prev)index=(index+1)%list.length;
+  try{sessionStorage.setItem('levunio-welcome-last',String(index))}catch{};
+  text.textContent=list[index]||fallback[0];};
+choose(fallback);
+fetch('./welcome-messages.json',{cache:'force-cache'}).then(r=>{if(!r.ok)throw Error('messages unavailable');return r.json()}).then(v=>{if(Array.isArray(v)&&v.length>=500&&!root.dataset.closed)choose(v)}).catch(()=>{});
+const reduce=window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+setTimeout(close,reduce?800:3600);
+})();
